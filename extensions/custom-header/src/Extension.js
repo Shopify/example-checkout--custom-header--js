@@ -1,17 +1,4 @@
-import {Image, InlineLayout} from '@shopify/ui-extensions/checkout';
-
-// The image URLs to display in the header; replace these with your own images. Learn more:
-// https://help.shopify.com/en/manual/shopify-admin/productivity-tools/file-uploads
-const images = [
-  'https://cdn.shopify.com/path/to/image/file_name_1.png',
-  'https://cdn.shopify.com/path/to/image/file_name_2.png',
-  'https://cdn.shopify.com/path/to/image/file_name_3.png',
-  'https://cdn.shopify.com/path/to/image/file_name_4.png',
-  'https://cdn.shopify.com/path/to/image/file_name_5.png',
-  'https://cdn.shopify.com/path/to/image/file_name_6.png',
-  'https://cdn.shopify.com/path/to/image/file_name_7.png',
-  'https://cdn.shopify.com/path/to/image/file_name_8.png',
-];
+import {Image} from '@shopify/ui-extensions/checkout';
 
 export default function renderExtension({root}) {
   // In case this is a re-render, then remove all previous children
@@ -19,24 +6,12 @@ export default function renderExtension({root}) {
     root.removeChild(child);
   }
 
-  // Create each of the images as an Image component
-  const imagesUi = images.map((source, index) => {
-    return root.createComponent(Image, {
-      key: index,
-      source,
-      aspectRatio: 1,
-    });
-  });
+  // Create the header's image using an Image component.
+  // Replace the source with your own image url. Learn more:
+  // https://help.shopify.com/en/manual/shopify-admin/productivity-tools/file-uploads
+  const image = root.createComponent(Image, {
+    source: 'https://cdn.shopify.com/path/to/image/file_name.png',
+  })
 
-  // Create an InlineStack component as a container to render each of the images horizontally
-  const header = root.createComponent(
-    InlineLayout,
-    {
-      columns: '1fr',
-      spacing: 'loose',
-    },
-    imagesUi,
-  );
-
-  root.appendChild(header);
+  root.appendChild(image);
 }
