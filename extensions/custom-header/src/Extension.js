@@ -1,5 +1,6 @@
 import {Image} from '@shopify/ui-extensions/checkout';
 
+// [START custom-header.render]
 export default function renderExtension({root}) {
   // In case this is a re-render, then remove all previous children
   for (const child of root.children) {
@@ -15,3 +16,4 @@ export default function renderExtension({root}) {
 
   root.appendChild(image);
 }
+// [END custom-header.render]
