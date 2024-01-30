@@ -2,7 +2,7 @@
 
 This repo contains an example app that uses [checkout UI extensions](https://shopify.dev/docs/api/checkout-ui-extensions) to build a custom header using JavaScript.
 
-For more information, and for a walkthrough of this code, review our tutorial: [Build a custom header checkout extension](https://shopify.dev/docs/apps/checkout/custom/banners/build?framework=javascript)
+For more information, and for a walkthrough of this code, review our tutorial: [Build a custom header checkout extension](https://shopify.dev/docs/apps/checkout/header-footer/customize-header?framework=javascript)
 
 This example app is also available with a [React extension](https://github.com/Shopify/example-checkout--custom-header--react).
 
