@@ -6,7 +6,7 @@ import {
   View,
 } from '@shopify/ui-extensions/checkout';
 
-// [START custom-header.render]
+// [START custom-header.buyer-journey]
 export default function renderExtension({root, api}) {
   const {i18n, buyerJourney, shop} = api;
   let assembledSteps = [];
@@ -53,8 +53,9 @@ export default function renderExtension({root, api}) {
     }
   }
 }
-// [END custom-header.render]
+// [END custom-header.buyer-journey]
 
+// [START custom-header.render]
 function createBreadcrumbs(
   root,
   steps = [],
@@ -156,3 +157,4 @@ function createDivider(root, index, steps) {
     return root.createComponent(Divider, {direction: 'block'});
   }
 }
+// [END custom-header.render]
