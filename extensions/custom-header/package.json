@@ -4,6 +4,6 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
-    "@shopify/ui-extensions": "2024.1.x"
+    "@shopify/ui-extensions": "2024.4.x"
   }
 }
